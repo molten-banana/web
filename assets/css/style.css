@@ -149,10 +149,8 @@ img {
 .header {
   position: fixed;
 
-  top: 20%;
+  top: 7rem;
   right: 2rem;
-
-  transform: translateY(-50%);
 
   z-index: 1000;
 }
@@ -187,7 +185,6 @@ body.dark .navbar {
 
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
-
 
 .nav-links {
   display: flex;
@@ -235,11 +232,11 @@ body.dark .navbar {
 .floating-theme-toggle {
   position: fixed;
 
-  top: 2.5rem;
-  right: 3rem;
+  top: 2rem;
+  right: 1rem;
 
-  width: 60px;
-  height: 60px;
+  width: 52px;
+  height: 52px;
 
   border-radius: 50%;
 
@@ -275,6 +272,57 @@ body.dark .floating-theme-toggle {
 }
 
 .floating-theme-toggle:hover {
+  transform: scale(1.08);
+
+  color: var(--accent);
+}
+
+
+/* Language Toggle */
+.language-toggle {
+  position: fixed;
+
+  top: 2rem;
+  right: 5rem;
+
+  width: 52px;
+  height: 52px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+
+  color: var(--text);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  z-index: 1100;
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease,
+    background 0.3s ease;
+}
+
+body.dark .language-toggle {
+  background: rgba(15, 23, 42, 0.28);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.language-toggle:hover {
   transform: scale(1.08);
 
   color: var(--accent);
@@ -339,7 +387,7 @@ body.dark .floating-theme-toggle {
 
   padding: 0.9rem 1.5rem;
 
-  border-radius: 5px;
+  border-radius: 999px;
 
   transition:
     transform 0.3s ease,
@@ -558,19 +606,21 @@ body.dark .card {
 @media (max-width: 768px) {
 
   .header {
-    top: auto;
+    top: 1rem;
 
-    bottom: 1rem;
+    left: 1rem;
 
-    right: 50%;
+    right: auto;
 
-    transform: translateX(50%);
+    bottom: auto;
+
+    transform: none;
   }
 
   .navbar {
-    flex-direction: row;
+    flex-direction: column;
 
-    border-radius: 999px;
+    border-radius: 5px;
 
     padding: 1rem 1.25rem;
   }
@@ -578,9 +628,9 @@ body.dark .card {
   .nav-links {
     position: absolute;
 
-    bottom: calc(100% + 1rem);
+    top: calc(100% + 1rem);
 
-    right: 0;
+    left: 0;
 
     background: rgba(15, 23, 42, 0.9);
 
@@ -588,7 +638,7 @@ body.dark .card {
 
     border: 1px solid rgba(255, 255, 255, 0.08);
 
-    border-radius: 24px;
+    border-radius: 5px;
 
     padding: 1.5rem;
 
@@ -620,6 +670,11 @@ body.dark .card {
   .floating-theme-toggle {
     top: 1rem;
     right: 1rem;
+  }
+
+  .language-toggle {
+    top: 1rem;
+    right: 4.5rem;
   }
 
   .hero {
