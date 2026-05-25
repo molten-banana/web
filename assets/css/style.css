@@ -1,0 +1,108 @@
+:root {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-toggle,
+.mobile-toggle {
+  border: none;
+  background: transparent;
+  color: var(--text);
+
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.mobile-toggle {
+  display: none;
+}
+
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-tag {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 10vw, 6rem);
+  line-height: 1.05;
+
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  width: min(700px, 100%);
+  margin-inline: auto;
+
+  color: var(--muted);
+
+  font-size: 1.1rem;
+
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+
+/* Buttons */
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: cent
