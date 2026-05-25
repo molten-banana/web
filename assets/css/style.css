@@ -188,15 +188,6 @@ body.dark .navbar {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.logo {
-  text-decoration: none;
-
-  color: var(--text);
-
-  font-weight: 700;
-
-  font-size: 1rem;
-}
 
 .nav-links {
   display: flex;
