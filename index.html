@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <meta charset="UTF-8" />
@@ -7,6 +8,11 @@
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="Modern responsive developer portfolio."
   />
 
   <title>Your Name | Portfolio</title>
@@ -29,6 +35,11 @@
 
   <link
     rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <link
+    rel="stylesheet"
     href="assets/css/style.css"
   />
 
@@ -36,38 +47,68 @@
 
 <body>
 
+  <!-- Scroll Progress -->
+  <div class="scroll-progress-container">
+
+    <div
+      class="scroll-progress-bar"
+      id="scrollProgressBar"
+    ></div>
+
+  </div>
+
+
+  <!-- Floating Menu -->
   <header class="header">
 
     <nav class="navbar">
 
-      <ul class="nav-links" id="navLinks">
+      <ul
+        class="nav-links"
+        id="navLinks"
+      >
 
         <li>
-          <a href="#home" data-i18n="navHome">
+          <a
+            href="#home"
+            data-i18n="navHome"
+          >
             Home
           </a>
         </li>
 
         <li>
-          <a href="#about" data-i18n="navAbout">
+          <a
+            href="#about"
+            data-i18n="navAbout"
+          >
             About
           </a>
         </li>
 
         <li>
-          <a href="#resume" data-i18n="navResume">
+          <a
+            href="#resume"
+            data-i18n="navResume"
+          >
             Resume
           </a>
         </li>
 
         <li>
-          <a href="#projects" data-i18n="navProjects">
+          <a
+            href="#projects"
+            data-i18n="navProjects"
+          >
             Projects
           </a>
         </li>
 
         <li>
-          <a href="#contact" data-i18n="navContact">
+          <a
+            href="#contact"
+            data-i18n="navContact"
+          >
             Contact
           </a>
         </li>
@@ -86,6 +127,7 @@
   </header>
 
 
+  <!-- Theme Toggle -->
   <button
     class="floating-theme-toggle"
     id="themeToggle"
@@ -95,6 +137,7 @@
   </button>
 
 
+  <!-- Language Toggle -->
   <button
     class="language-toggle"
     id="languageToggle"
@@ -284,6 +327,7 @@
 
         <div class="projects-grid">
 
+          <!-- Project One -->
           <div class="card project-card reveal">
 
             <div class="project-content">
@@ -304,8 +348,17 @@
 
             </div>
 
+            <button
+              class="primary-button open-modal"
+              data-modal="project1Modal"
+            >
+              View Details
+            </button>
+
           </div>
 
+
+          <!-- Project Two -->
           <div class="card project-card reveal">
 
             <div class="project-content">
@@ -325,6 +378,13 @@
               </div>
 
             </div>
+
+            <button
+              class="primary-button open-modal"
+              data-modal="project2Modal"
+            >
+              View Details
+            </button>
 
           </div>
 
@@ -367,14 +427,17 @@
           <div class="contact-links">
 
             <a href="#">
+              <i class="fab fa-github"></i>
               GitHub
             </a>
 
             <a href="#">
+              <i class="fab fa-linkedin"></i>
               LinkedIn
             </a>
 
             <a href="#">
+              <i class="fas fa-envelope"></i>
               Email
             </a>
 
@@ -389,6 +452,7 @@
   </main>
 
 
+  <!-- Footer -->
   <footer class="footer">
 
     <p>
@@ -396,6 +460,52 @@
     </p>
 
   </footer>
+
+
+  <!-- Project Modal One -->
+  <div
+    class="modal"
+    id="project1Modal"
+  >
+
+    <div class="modal-content">
+
+      <button class="close-modal">
+        ×
+      </button>
+
+      <h2>Project One</h2>
+
+      <p>
+        Detailed information about Project One.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- Project Modal Two -->
+  <div
+    class="modal"
+    id="project2Modal"
+  >
+
+    <div class="modal-content">
+
+      <button class="close-modal">
+        ×
+      </button>
+
+      <h2>Project Two</h2>
+
+      <p>
+        Detailed information about Project Two.
+      </p>
+
+    </div>
+
+  </div>
 
 
   <script src="assets/js/main.js"></script>
