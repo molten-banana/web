@@ -77,28 +77,3 @@ const revealOnScroll = () => {
 window.addEventListener('scroll', revealOnScroll);
 
 revealOnScroll();
-```
-
----
-
-# Important GitHub Pages Notes
-
-Since your site is hosted at:
-
-```text
-https://molten-banana.github.io/web
-```
-
-Use relative paths only.
-
-GOOD:
-
-```html
-href="assets/resume.pdf"
-```
-
-BAD:
-
-```html
-href="/assets/resume.pdf"
-```
