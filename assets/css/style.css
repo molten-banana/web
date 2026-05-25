@@ -45,9 +45,29 @@ body {
 
   background-color: var(--bg);
 
-  background-image: url('../images/background-light.png');
-  background-repeat: repeat;
-  background-size: 400px;
+  background-image:
+    radial-gradient(
+      circle at top left,
+      rgba(37, 99, 235, 0.08),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(59, 130, 246, 0.06),
+      transparent 30%
+    ),
+    url('../images/background-light.png');
+
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    repeat;
+
+  background-size:
+    cover,
+    cover,
+    400px;
+
   background-attachment: fixed;
 
   color: var(--text);
@@ -62,7 +82,30 @@ body {
 }
 
 body.dark {
-  background-image: url('../images/background-dark.png');
+  background-image:
+    radial-gradient(
+      circle at top left,
+      rgba(96, 165, 250, 0.12),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(59, 130, 246, 0.08),
+      transparent 30%
+    ),
+    url('../images/background-dark.png');
+
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    repeat;
+
+  background-size:
+    cover,
+    cover,
+    400px;
+
+  background-attachment: fixed;
 }
 
 body.menu-open {
@@ -106,7 +149,7 @@ img {
 .header {
   position: fixed;
 
-  top: 50%;
+  top: 20%;
   right: 2rem;
 
   transform: translateY(-50%);
@@ -121,32 +164,28 @@ img {
 
   width: fit-content;
 
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.08);
 
-  backdrop-filter: blur(28px);
-  -webkit-backdrop-filter: blur(28px);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
 
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 
-  border-radius: 32px;
+  border-radius: 5px;
 
   padding: 1.25rem 1rem;
 
   box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.08),
+    0 8px 32px rgba(0, 0, 0, 0.12),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
 
   gap: 1.5rem;
 }
 
 body.dark .navbar {
-  background: rgba(15, 23, 42, 0.18);
+  background: rgba(15, 23, 42, 0.28);
 
-  border: 1px solid rgba(255, 255, 255, 0.06);
-
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .logo {
@@ -205,20 +244,20 @@ body.dark .navbar {
 .floating-theme-toggle {
   position: fixed;
 
-  top: 2rem;
-  right: 2rem;
+  top: 2.5rem;
+  right: 4rem;
 
-  width: 52px;
-  height: 52px;
+  width: 60px;
+  height: 60px;
 
   border-radius: 50%;
 
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.08);
 
-  backdrop-filter: blur(28px);
-  -webkit-backdrop-filter: blur(28px);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
 
   color: var(--text);
 
@@ -229,7 +268,7 @@ body.dark .navbar {
   z-index: 1100;
 
   box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.08),
+    0 8px 32px rgba(0, 0, 0, 0.12),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
 
   transition:
@@ -239,13 +278,9 @@ body.dark .navbar {
 }
 
 body.dark .floating-theme-toggle {
-  background: rgba(15, 23, 42, 0.18);
+  background: rgba(15, 23, 42, 0.28);
 
-  border: 1px solid rgba(255, 255, 255, 0.06);
-
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .floating-theme-toggle:hover {
@@ -313,7 +348,7 @@ body.dark .floating-theme-toggle {
 
   padding: 0.9rem 1.5rem;
 
-  border-radius: 999px;
+  border-radius: 5px;
 
   transition:
     transform 0.3s ease,
@@ -352,7 +387,7 @@ body.dark .floating-theme-toggle {
 
   border: 1px solid rgba(255, 255, 255, 0.12);
 
-  border-radius: 24px;
+  border-radius: 5px;
 
   padding: 2rem;
 
